@@ -3,8 +3,9 @@
 import {rps} from "../lib/rpsls.js"
 import minimist from 'minimist';
 
-var argv = minimist(process.argv.slice(2));
-if (argv.h || argv.help) {
+var args = minimist(process.argv.slice(2));
+
+if (args.h || args.help) {
     console.log(`Usage: node-rps [SHOT]
         Play Rock Paper Scissors (RPS)
         
@@ -19,7 +20,7 @@ if (argv.h || argv.help) {
     process.exit(0);
 }
 
-if (argv.r || argv.rules) {
+if (args.r || args.rules) {
     console.log(`Rules for Rock Paper Scissors:
 
         - Scissors CUTS Paper
@@ -27,11 +28,12 @@ if (argv.r || argv.rules) {
         - Rock CRUSHES Scissors`);
     process.exit(0);
 }
-if (argv._.length <= 2) {
-    console.log(JSON.stringify(rps()))
-} else if (argv._.length > 3) {
-    console.error("Argument is out of range")
-} else {
-    console.log(JSON.stringify(rps(...argv._.slice(2))))
-}
 
+let shot = args._[0]
+
+try {
+	console.log(JSON.stringify(rps(shot)));
+} catch (e) {
+	console.log(help_message);
+	console.log(rules);
+}
