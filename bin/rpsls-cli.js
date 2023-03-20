@@ -22,7 +22,6 @@ if (args.h || args.help) {
 
 if (args.r || args.rules) {
     console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
-
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock SMOOSHES Lizard
@@ -42,7 +41,6 @@ try {
     console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
     console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
-
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock SMOOSHES Lizard
