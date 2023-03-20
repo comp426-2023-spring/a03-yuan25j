@@ -21,7 +21,7 @@ if (args.h || args.help) {
 }
 
 if (args.r || args.rules) {
-    console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+    console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock SMOOSHES Lizard
@@ -31,7 +31,8 @@ if (args.r || args.rules) {
     - Lizard EATS Paper
     - Paper DISPROVES Spock
     - Spock VAPORIZES Rock
-    - Rock CRUSHES Scissors`);
+    - Rock CRUSHES Scissors
+    `);
     process.exit(0);
 }
 
@@ -40,7 +41,7 @@ let shot = args._[0]
 try {
     console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
-    console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+    console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock SMOOSHES Lizard
@@ -50,5 +51,6 @@ try {
     - Lizard EATS Paper
     - Paper DISPROVES Spock
     - Spock VAPORIZES Rock
-    - Rock CRUSHES Scissors`);
+    - Rock CRUSHES Scissors
+    `);
 }
