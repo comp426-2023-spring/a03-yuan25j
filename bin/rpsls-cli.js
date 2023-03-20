@@ -39,7 +39,18 @@ if (args.r || args.rules) {
 let shot = args._[0]
 
 try {
-        console.log(JSON.stringify(rpsls(shot)));
+    console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
-        console.log(rules);
+    console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+
+    - Scissors CUTS Paper
+    - Paper COVERS Rock
+    - Rock SMOOSHES Lizard
+    - Lizard POISONS Spock
+    - Spock SMASHES Scissors
+    - Scissors DECAPITATES Lizard
+    - Lizard EATS Paper
+    - Paper DISPROVES Spock
+    - Spock VAPORIZES Rock
+    - Rock CRUSHES Scissors`);
 }
